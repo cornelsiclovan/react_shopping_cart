@@ -1,9 +1,10 @@
+// feature 1
 
 function App() {
   return (
    <div className="grid-container">
      <header>
-       <a hred="/">React Shopping Cart</a>
+       <a href="/">React Shopping Cart</a>
      </header>
      <main>
        Product List
