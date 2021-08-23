@@ -3,7 +3,7 @@ import formatCurrency from '../util';
 import Fade from 'react-reveal/Fade';
 import Modal from "react-modal";
 import Zoom from 'react-reveal/Zoom';
-import { fetchProducts } from '../actions/productsAction';
+import { fetchProducts } from '../actions/productActions';
 import { connect } from "react-redux";
 
 class Products extends Component {
@@ -99,4 +99,8 @@ class Products extends Component {
     }
 }
 
-export default connect((state)=>({ products: state.products.items }), {fetchProducts})(Products);
+export default connect((state)=>(
+                    { 
+                        products: state.products.filteredItems 
+                    }
+                    ), {fetchProducts})(Products);
